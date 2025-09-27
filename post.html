@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GG Social • Post</title>
+  <link rel="stylesheet" href="css/feed.css" />
+  <style>
+    .single {
+      max-width: 900px;
+      margin: 16px auto;
+    }
+
+    .single .hero {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .single .hero img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    .single .content {
+      padding: 16px;
+    }
+
+    .single .title {
+      margin: 0 0 6px 0;
+      font-weight: 800;
+      font-size: 1.4rem;
+    }
+
+    .single .meta {
+      color: var(--muted);
+      font-size: .95rem;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .single .body {
+      white-space: pre-wrap;
+      margin: 10px 0 14px;
+    }
+
+    .chip {
+      background: #141820;
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: .85rem;
+      margin-right: 6px;
+      display: inline-block
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .comments {
+      margin-top: 18px
+    }
+
+    .comment {
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, var(--card), #171a20);
+      border-radius: 12px;
+      padding: 10px;
+      margin-top: 8px
+    }
+
+    .comment .meta {
+      font-size: .85rem
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">GG Social</div>
+    <nav id="authRight"></nav>
+  </header>
+
+  <main class="wrap single">
+    <p id="postError" class="error"></p>
+
+    <article id="post" class="hero">
+      <img id="postImg" alt="">
+      <div class="content">
+        <h1 id="postTitle" class="title">Loading…</h1>
+        <div id="postMeta" class="meta"></div>
+        <div id="postBody" class="body"></div>
+        <div id="postTags"></div>
+
+        <div class="actions" style="margin-top:10px">
+          <button id="reactBtn" class="btn">Toggle 👍</button>
+          <a id="editBtn" class="ghost" style="display:none">Edit</a>
+          <button id="delBtn" class="ghost" style="display:none">Delete</button>
+        </div>
+
+        <section class="comments">
+          <h3 style="margin:10px 0 6px">Comments</h3>
+          <form id="commentForm" class="card" style="padding:10px; display:flex; gap:8px; align-items:center">
+            <input id="commentText" type="text" placeholder="Write a comment…" required />
+            <button class="btn" type="submit">Send</button>
+          </form>
+          <div id="commentsOut"></div>
+        </section>
+      </div>
+    </article>
+
+    <div class="pager" style="justify-content:flex-start">
+      <a href="./feed.html" class="ghost">← Back to feed</a>
+    </div>
+  </main>
+
+  <script type="module" src="js/post.js"></script>
+</body>
+
+</html>

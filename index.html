@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GG Social • Login</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body>
+  <header>
+    <div>GG Social</div>
+    <nav>
+      <a href="./feed.html">Feed</a>
+      <a href="./register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Login</h1>
+
+    <form id="loginForm" class="card">
+      <input name="email" type="email" placeholder="email@stud.noroff.no" required />
+      <input name="password" type="password" placeholder="password" required />
+      <button type="submit">Sign in</button>
+
+      <p class="muted" style="margin-top:8px">
+        <a href="#" title="Not provided by the API">Forgot your password?</a> ·
+        <a href="./register.html">No account? Register</a>
+      </p>
+
+      <p id="loginError" class="error"></p>
+    </form>
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+
+</html>

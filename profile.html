@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GG Social • Profile</title>
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+
+<body class="profile-page">
+  <header class="topbar">
+    <div class="brand">GG Social</div>
+    <nav id="authRight"></nav>
+  </header>
+
+  <main class="wrap">
+    <p id="pErr" class="error" role="alert"></p>
+
+    <section class="card profile-card">
+      <div class="banner" id="pBanner"></div>
+
+      <div class="pheader">
+        <div class="avatar-wrap">
+          <img id="pAvatar" class="avatar" alt="avatar" />
+        </div>
+
+        <div class="info">
+          <h1 id="pName">My profile</h1>
+          <div id="pBio" class="meta"></div>
+          <div class="chips" id="pChips"></div>
+        </div>
+
+        <div class="pactions">
+          <a class="ghost small" href="./feed.html">All posts</a>
+          <a class="ghost small" href="./post-new.html">New post</a>
+          <button id="editProfileBtn" class="btn small">Edit profile</button>
+          <button id="followBtn" class="ghost small" hidden>Follow</button>
+          <button id="logoutBtn" class="ghost small">Logout</button>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="section">My posts</h2>
+    <div id="postsOut" class="grid" aria-live="polite"></div>
+
+    <div class="pager">
+      <button id="prevPage" class="ghost">« Prev</button>
+      <span id="pageIndicator" class="muted">Page 1</span>
+      <button id="nextPage" class="ghost">Next »</button>
+    </div>
+
+    <div id="editProfileModal" class="modal" hidden>
+      <div class="modal__backdrop"></div>
+      <div class="modal__card">
+        <h3>Edit profile</h3>
+        <p id="editPErr" class="error"></p>
+        <form id="editPForm" autocomplete="off">
+          <label>Avatar URL
+            <input type="url" id="inpAvatar" name="avatar" placeholder="https://..." />
+          </label>
+          <label>Banner URL
+            <input type="url" id="inpBanner" name="banner" placeholder="https://..." />
+          </label>
+          <label>Bio
+            <textarea id="inpBio" name="bio" rows="4" placeholder="Tell something about you…"></textarea>
+          </label>
+          <div class="modal__row">
+            <button type="button" id="cancelEdit" class="ghost">Cancel</button>
+            <button type="submit" class="btn">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot"></footer>
+  <script type="module" src="js/profile.js"></script>
+</body>
+
+</html>

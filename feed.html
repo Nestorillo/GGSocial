@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GG Social • Feed</title>
+  <link rel="stylesheet" href="css/feed.css" />
+</head>
+
+<body class="feed-page">
+  <header>
+    <div class="brand">GG Social</div>
+    <nav id="authRight">
+      <a href="./index.html" data-public>Login</a>
+      <a href="./register.html" data-public>Register</a>
+      <button id="logoutBtn" class="ghost" data-auth hidden>Logout</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar card">
+      <div class="search">
+        <input id="searchInput" type="text" placeholder="Search posts..." aria-label="Search posts" />
+        <button id="searchBtn" class="btn">Search</button>
+      </div>
+
+      <div class="segmented" role="tablist" aria-label="Filter posts">
+        <button id="filterAll" class="active" role="tab" aria-selected="true">All</button>
+        <button id="filterMine" role="tab" aria-selected="false">My posts</button>
+      </div>
+
+      <div class="toolbar__right">
+        <a href="./post-new.html" class="btn" id="btnNew">New post</a>
+      </div>
+    </div>
+
+    <p id="feedError" class="error" role="alert"></p>
+    <div id="postsOut" class="grid"></div>
+
+    <div class="pager">
+      <button id="prevPage" class="ghost" aria-label="Previous page">« Prev</button>
+      <span id="pageIndicator" aria-live="polite">Page 1</span>
+      <button id="nextPage" class="ghost" aria-label="Next page">Next »</button>
+    </div>
+  </main>
+
+  <script type="module" src="js/feed.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GG Social • Register</title>
+    <link rel="stylesheet" href="css/register.css" />
+</head>
+
+<body>
+    <header>
+        <div>GG Social</div>
+        <nav>
+            <a href="./index.html">Login</a>
+            <a href="./feed.html">Feed</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Create your account</h1>
+
+        <form id="registerForm" class="card">
+            <div class="two">
+                <label>
+                    <span>Username*</span>
+                    <input name="name" type="text" placeholder="my_username" required />
+                </label>
+                <label>
+                    <span>Email (stud.noroff.no)*</span>
+                    <input name="email" type="email" placeholder="you@stud.noroff.no" required />
+                </label>
+            </div>
+
+            <label>
+                <span>Password* (min 8 chars)</span>
+                <input name="password" type="password" placeholder="********" minlength="8" required />
+            </label>
+
+            <label>
+                <span>Bio (optional, <160 chars)</span>
+                        <input name="bio" type="text" maxlength="160" placeholder="Short profile bio" />
+            </label>
+
+            <div class="two">
+                <label>
+                    <span>Avatar URL (optional)</span>
+                    <input name="avatarUrl" type="url" placeholder="https://..." />
+                </label>
+                <label>
+                    <span>Avatar alt (optional)</span>
+                    <input name="avatarAlt" type="text" maxlength="120" placeholder="My avatar" />
+                </label>
+            </div>
+
+            <button type="submit">Create account</button>
+
+            <p class="muted" style="margin-top:8px">
+                Already have an account? <a href="./index.html">Login</a>
+            </p>
+
+            <p id="registerError" class="error"></p>
+            <p id="registerOk" class="ok"></p>
+        </form>
+    </main>
+
+    <script type="module" src="js/register.js"></script>
+</body>
+
+</html>

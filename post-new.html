@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GG Social • New post</title>
+  <link href="css/post-edit.css" rel="stylesheet" />
+</head>
+
+<body class="edit-page">
+  <header class="topbar">
+    <div class="brand">GG Social</div>
+    <nav id="authRight"></nav>
+  </header>
+
+  <main class="container">
+    <h1>New Post</h1>
+
+    <p id="newErr" class="error" role="alert"></p>
+
+    <form id="newForm" autocomplete="off" novalidate>
+      <label>Title
+        <input type="text" id="title" name="title" required />
+      </label>
+
+      <label>Image URL
+        <input type="url" id="mediaUrl" name="mediaUrl" placeholder="https://..." />
+      </label>
+
+      <label>Image Alt
+        <input type="text" id="mediaAlt" name="mediaAlt" placeholder="optional" />
+      </label>
+
+      <label>Tags (comma separated)
+        <input type="text" id="tags" name="tags" placeholder="action,rpg,pc" />
+      </label>
+
+      <label>Description (Markdown allowed)
+        <textarea id="body" name="body" rows="10" required></textarea>
+      </label>
+
+      <div class="row">
+        <button type="submit" class="btn">Create post</button>
+      </div>
+    </form>
+  </main>
+
+  <script type="module" src="js/post-new.js"></script>
+</body>
+
+</html>

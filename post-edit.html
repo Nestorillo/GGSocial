@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Post</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/post-edit.css" rel="stylesheet" />
+</head>
+
+<body class="edit-page">
+  <header class="topbar">
+    <a class="brand" href="index.html">GG Social</a>
+    <nav class="nav"><a href="feed.html">All posts</a></nav>
+  </header>
+
+  <main class="container">
+    <h1>Edit Post</h1>
+    <p id="editInfo" class="muted" aria-live="polite"></p>
+    <p id="editError" class="error" role="alert"></p>
+
+    <form id="editForm" autocomplete="off" novalidate>
+      <label>Title
+        <input type="text" id="title" name="title" required />
+      </label>
+
+      <label>Image URL
+        <input type="url" id="imageUrl" name="imageUrl" placeholder="https://..." />
+      </label>
+
+      <label>Tags (comma separated)
+        <input type="text" id="tags" name="tags" placeholder="action,rpg,pc" />
+      </label>
+
+      <label>Description (Markdown allowed)
+        <textarea id="body" name="body" rows="10" required></textarea>
+      </label>
+
+      <div class="row">
+        <button type="submit" class="btn">Save changes</button>
+        <button type="button" id="deleteBtn" class="btn btn-danger">Delete</button>
+      </div>
+    </form>
+  </main>
+
+  <script type="module" src="js/post-edit.js"></script>
+</body>
+
+</html>

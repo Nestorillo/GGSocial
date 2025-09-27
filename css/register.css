@@ -1,0 +1,163 @@
+:root {
+  --bg: #0e0f12;
+  --bg-alt: #121318;
+  --card: #1b1d24;
+  --text: #ffae00;
+  --muted: #ffae00;
+  --accent: #ffae00;
+  --danger: #ff2c2c;
+  --border: rgba(255, 255, 255, .08);
+  --focus: 0 0 0 3px rgba(255, 122, 26, .35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 500px at 110% -10%, #1b1d24 0%, transparent 60%),
+    radial-gradient(800px 500px at -10% 115%, #15171d 0%, transparent 55%),
+    linear-gradient(180deg, var(--bg) 0%, #0a0b0e 100%);
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+header nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 12px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Centered container */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 20px;
+
+  min-height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card {
+  width: 560px;
+  max-width: 96vw;
+  background: linear-gradient(180deg, var(--card), #171a20);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+h1 {
+  margin: 0 0 4px;
+}
+
+label {
+  display: block;
+  width: 100%;
+}
+
+label>span {
+  display: block;
+  font-size: .9rem;
+  color: var(--muted);
+  margin: 4px 0;
+}
+
+.two {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 640px) {
+  .two {
+    grid-template-columns: 1fr;
+  }
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #2a2e36;
+  background: #13151a;
+  color: var(--text);
+  outline: none;
+}
+
+input::placeholder {
+  color: #8e929a;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: var(--focus);
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: #26160a;
+  border: none;
+  font-weight: 700;
+  transition: transform .02s ease, filter .15s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  filter: brightness(1.06);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.error {
+  color: var(--danger);
+  margin-top: 8px;
+}
+
+.ok {
+  color: var(--ok);
+  margin-top: 8px;
+}
+
+.card .muted a {
+  color: orange;
+  font-weight: 600;
+
+}
